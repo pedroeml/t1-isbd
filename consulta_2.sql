@@ -1,0 +1,10 @@
+-- CONSULTA 2
+-- Consulta com sub-consulta;
+-- - Sub-consulta retorna pelo menos 1 valor por função de agregação;
+-- - Orientações específicas:
+--      -- ao menos 2 tabelas, sendo uma delas DESPESASx;
+--      -- Função de agregação na sub-consulta. Exemplo:
+--              select * from pedidos_produtos
+--              where valor_unitário > (select avg(preço) from produtos);
+--      -- Ordenar por coluna não pertencente a PRIMARY KEY.
+-- Cenário sugerido de otimização: criação de índices.
