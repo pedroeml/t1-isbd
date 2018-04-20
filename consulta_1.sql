@@ -30,3 +30,5 @@ where NUMERO_GRUPO between 1 and 3
   and TIPO_EMPENHO between 5 and 8  
   and DATA_DESPESA between '01-OUT-10' and '1-OUT-11'
 order by NUMERO_EMPENHO;
+
+create index IX_NUMERO_PESSOA on PESSOAS1 (NUMERO_PESSOA);
