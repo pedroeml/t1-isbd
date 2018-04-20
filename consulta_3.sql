@@ -1,0 +1,7 @@
+-- CONSULTA 3
+-- - Consulta com junção externa entre RUBRICAS e DESPESASx (LEFT JOIN);
+-- - Na saída do SELECT, pelo menos 2 colunas de cada uma das 2 tabelas;
+-- - Orientações específicas:
+--      - Seleções sobre colunas que não pertençam às chaves primárias das tabelas;
+--      - Ordenar a saída por coluna diferente de PRIMARY KEY de alguma tabela.
+-- - Cenário sugerido de otimização: transformação de junção externa em junção interna mais UNION com o que faltou.
