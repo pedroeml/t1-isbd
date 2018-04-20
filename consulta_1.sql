@@ -1,5 +1,5 @@
 -- CONSULTA 1
--- Junção de pelo menos 4 tabelas, sendo 1 delas DESPESASx;
+-- - Junção de pelo menos 4 tabelas, sendo 1 delas DESPESASx;
 --      >>> OK, tem "natural join" em 4 tabelas: PESSOAS1, DESPESAS1, GRUPOS e TIPO_EMPENHOS
 -- - Na saída do SELECT, pelo menos 2 colunas de cada uma das 4 tabelas;
 --      >>> OK, na cláusula "select" há seleção de 2 ou 3 colunas por tabela
@@ -14,7 +14,7 @@
 --          >>> OK, tem "between" e operadores "maior que" e "menor que"
 --      - Ordenar a saída por coluna diferente de PRIMARY KEY de alguma tabela.
 --          >>> OK, tem "order by NUMERO_EMPENHO"
--- Cenário sugerido de otimização: criação de índices
+-- - Cenário sugerido de otimização: criação de índices
 --      >>> No arquivo ImplemSDB_CriaPopulaEsquema.sql tem exemplos de CREATE INDEX
 
 select NUMERO_GRUPO, NOME_GRUPO                         -- Colunas existentes em GRUPOS

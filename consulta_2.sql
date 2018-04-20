@@ -1,5 +1,5 @@
 -- CONSULTA 2
--- Consulta com sub-consulta;
+-- - Consulta com sub-consulta;
 -- - Sub-consulta retorna pelo menos 1 valor por função de agregação;
 --      >>> OK, tem a subconsulta que verifica a média de VALOR_EMPENHADO
 -- - Orientações específicas:
@@ -10,8 +10,8 @@
 --              where valor_unitário > (select avg(preço) from produtos);
 --      -- Ordenar por coluna não pertencente a PRIMARY KEY.
 --          >>> OK, tem "order by VALOR_EMPENHADO"
--- Cenário sugerido de otimização: criação de índices.
---  >>> TODO
+-- - Cenário sugerido de otimização: criação de índices.
+--      >>> TODO
 
 select NUMERO_PESSOA, NOME_PESSOA, VALOR_EMPENHADO
 from PESSOAS1 natural join DESPESAS1
