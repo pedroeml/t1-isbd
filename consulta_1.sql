@@ -15,7 +15,7 @@
 --      - Ordenar a saída por coluna diferente de PRIMARY KEY de alguma tabela.
 --          >>> OK, tem "order by NUMERO_EMPENHO"
 -- - Cenário sugerido de otimização: criação de índices
---      >>> No arquivo ImplemSDB_CriaPopulaEsquema.sql tem exemplos de CREATE INDEX
+--      >> OK
 
 select NUMERO_GRUPO, NOME_GRUPO                         -- Colunas existentes em GRUPOS
        NUMERO_PESSOA, NOME_PESSOA,                      -- Colunas existentes em PESSOAS1

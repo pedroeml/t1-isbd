@@ -11,7 +11,7 @@
 --      -- Ordenar por coluna não pertencente a PRIMARY KEY.
 --          >>> OK, tem "order by VALOR_EMPENHADO"
 -- - Cenário sugerido de otimização: criação de índices.
---      >>> TODO
+--      >>> OK
 
 select NUMERO_PESSOA, NOME_PESSOA, VALOR_EMPENHADO
 from PESSOAS1 natural join DESPESAS1
