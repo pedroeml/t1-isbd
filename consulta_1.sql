@@ -29,6 +29,6 @@ where NUMERO_GRUPO between 1 and 3
   and NUMERO_EMPENHO > 8000
   and TIPO_EMPENHO between 5 and 8  
   and DATA_DESPESA between '01-OUT-10' and '1-OUT-11'
-order by NUMERO_EMPENHO;
+order by VALOR_EMPENHADO;
 
-create index IX_NUMERO_PESSOA on PESSOAS1 (NUMERO_PESSOA);
+create index IX_VALOR_EMPENHADO on DESPESAS1 (VALOR_EMPENHADO);
