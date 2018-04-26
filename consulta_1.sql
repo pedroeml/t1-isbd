@@ -32,3 +32,19 @@ where NUMERO_GRUPO between 1 and 3
 order by VALOR_EMPENHADO;
 
 create index IX_DATA_DESPESA on DESPESAS1 (DATA_DESPESA);
+
+analyze table DESPESAS1 compute statistics;
+
+select NUMERO_GRUPO, NOME_GRUPO                         -- Colunas existentes em GRUPOS
+       NUMERO_PESSOA, NOME_PESSOA,                      -- Colunas existentes em PESSOAS1
+       TIPO_EMPENHO, DESCRICAO_EMPENHO,                 -- Colunas existentes em TIPO_EMPENHOS
+       NUMERO_EMPENHO, VALOR_EMPENHADO, DATA_DESPESA    -- Colunas existentes em DESPESAS1
+from PESSOAS1 natural join DESPESAS1
+              natural join GRUPOS
+              natural join TIPOS_EMPENHOS
+where NUMERO_GRUPO between 1 and 3
+  and NUMERO_PESSOA > 1000
+  and NUMERO_EMPENHO > 8000
+  and TIPO_EMPENHO between 5 and 8  
+  and DATA_DESPESA between '01-OUT-10' and '1-OUT-11'
+order by VALOR_EMPENHADO;

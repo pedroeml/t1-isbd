@@ -19,3 +19,10 @@ where VALOR_EMPENHADO >= (select avg(VALOR_EMPENHADO) from DESPESAS1)
 order by VALOR_EMPENHADO;
 
 create index IX_VALOR_EMPENHADO on DESPESAS1 (VALOR_EMPENHADO);
+
+analyze table DESPESAS1 compute statistics;
+
+select NUMERO_PESSOA, NOME_PESSOA, VALOR_EMPENHADO
+from PESSOAS1 natural join DESPESAS1
+where VALOR_EMPENHADO >= (select avg(VALOR_EMPENHADO) from DESPESAS1)
+order by VALOR_EMPENHADO;
