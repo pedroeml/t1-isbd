@@ -16,5 +16,15 @@ from RUBRICAS left join DESPESAS1
     on RUBRICAS.NUMERO_RUBRICA = DESPESAS1.NUMERO_RUBRICA
 order by CODIGO_RUBRICA;
 
-select * from RUBRICAS inner join DESPESAS1
--- union Como seleciono os registros que não são em comum entre as duas tabelas? É a junção externa?;
+select NOME_RUBRICA, CODIGO_RUBRICA,    -- Colunas existentes em RUBRICA
+       VALOR_EMPENHADO, VALOR_PAGO      -- Colunas existentes em DESPESAS1
+from RUBRICAS inner join DESPESAS1
+    on RUBRICAS.NUMERO_RUBRICA = DESPESAS1.NUMERO_RUBRICA
+union
+select NOME_RUBRICA, CODIGO_RUBRICA,    -- Colunas existentes em RUBRICA
+       NULL, NULL
+from RUBRICAS
+where not exists (
+    select * from DESPESAS1 where RUBRICAS.NUMERO_RUBRICA = DESPESAS1.NUMERO_RUBRICA
+)
+order by CODIGO_RUBRICA;
