@@ -31,4 +31,4 @@ where NUMERO_GRUPO between 1 and 3
   and DATA_DESPESA between '01-OUT-10' and '1-OUT-11'
 order by VALOR_EMPENHADO;
 
-create index IX_VALOR_EMPENHADO on DESPESAS1 (VALOR_EMPENHADO);
+create index IX_DATA_DESPESA on DESPESAS1 (DATA_DESPESA);
